@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Pour la plus belle des fleurs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="page-title">Pour la plus belle des fleurs</h1>
+
+  <!-- Container de la fleur -->
+  <div class="container">
+    <div class="glass">
+      <div class="shine"></div>
+    </div>
+
+    <div class="thorns">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="leaves">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="petals">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="deadPetals">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <div class="text-left">
+    <p>Chaque pétale de cette fleur est une raison de pourquoi t'apprécie autant, et une infinité en tombe alors...</p>
+  </div>
+
+  <div class="text-right">
+    <p>... je ne pourrais jamais m'arrêter d'en trouver tant tu es parfaite sur tous les points possibles et imaginables !!  </p>
+  </div>
+
+  <audio id="background-music" loop>
+    <source src="OutOfMyLeague.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="start-overlay" style="position:fixed;top:0;left:0;width:100%;height:100%;cursor:pointer;"></div>
+
+  <script>
+    const audio = document.getElementById('background-music');
+    const overlay = document.getElementById('start-overlay');
+
+    // Première interaction : lecture de la musique
+    overlay.addEventListener('click', () => {
+      audio.currentTime = 30;  // commencer à 30s
+      audio.volume = 0.3;
+      audio.play();
+      overlay.style.display = 'none'; // masquer l’overlay
+    });
+  </script>
+
+</body>
+</html>
